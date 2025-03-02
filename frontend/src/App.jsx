@@ -15,7 +15,10 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`http://localhost:3001/query?q=${query}`);
+      // const response = await fetch(`http://localhost:3001/query?q=${query}`);
+      const response = await fetch(
+        `https://cdp-chatbot-x0h0.onrender.com/query?q=${query}`
+      );
       const data = await response.json();
 
       // Update messages state with user query and AI response
