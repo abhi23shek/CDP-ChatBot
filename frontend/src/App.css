@@ -1,0 +1,120 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  justify-content: flex-end; /* Align chatbot to the right */
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.chatbot-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 30vw; /* 30% of viewport width */
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto; /* Enable scrolling for messages */
+  padding: 16px;
+  display: flex;
+  flex-direction: column; /* New messages at the bottom */
+}
+
+.message {
+  margin-bottom: 16px;
+}
+
+.user-message {
+  background-color: #e3f2fd;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.ai-message {
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.sources {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.sources ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sources li {
+  margin: 4px 0;
+}
+
+.sources a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.input-container {
+  display: flex;
+  padding: 16px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.query-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.send-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.initial-message {
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Title Styling */
+.chatbot-container .messages-container > div:first-child {
+  font-size: 1.5em; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align */
+  padding: 16px; /* Add padding */
+  background-color: #3d6c9d; /* Blue background */
+  color: #fff; /* White text */
+  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  margin-bottom: 16px; /* Space below the title */
+}
