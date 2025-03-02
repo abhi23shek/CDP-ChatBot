@@ -57,6 +57,10 @@ async function summarizeWithGPT(searchResults, query) {
   }
 }
 
+app.get("/", (req, res) => {
+  res.send("CDP ChatBot API");
+});
+
 // API endpoint to fetch search results and generate a summary
 app.get("/query", async (req, res) => {
   const query = req.query.q;
